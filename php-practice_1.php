@@ -5,7 +5,7 @@
 
 $name = '吉川';
 
-echo "私の名前は「".$name."」です"; 
+echo '私の名前は「' . $name . '」です'; 
 
 
 // Q2 四則演算
@@ -27,20 +27,20 @@ date_default_timezone_set('Asia/Tokyo');
 
 $date = date("Y年m月d日 H時i分s秒");
 
-echo "現在時刻は、" . $date . "です";
+echo '現在時刻は、' . $date . 'です';
 
 
 // Q4 条件分岐-1 if文
 
 <?php
 
-$device = "windows";
+$device = 'windows';
 
-if ($device === "mac" || $device === "windows") {
-    echo "使用OSは、" . $device . "です。";
-
-} else {
-    echo "どちらでもありません。";
+if ($device === 'mac' || $device === 'windows') {
+    echo '使用OSは、' . $device . 'です。';
+}
+ else {
+    echo 'どちらでもありません。';
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -59,11 +59,10 @@ echo $message;
 
 $array = ['埼玉県', '群馬県', '栃木県', '千葉県', '神奈川県', '東京都', '山梨県'];
 
-$count = count($array);
+  $x = $array[2];
+  $y = $array[3];
 
-    $x = $array[2];
-    $y = $array[3];
-echo $x . "と" . $y . "は関東地方の都道府県です\n";
+echo $x . 'と' . $y . "は関東地方の都道府県です\n";
 
 // Q7 連想配列-1
 
@@ -79,8 +78,8 @@ $array = [
     '茨城県' => '水戸市'
 ];
 
-foreach ($array as $x => $y) {
-    echo "$y \n";
+foreach ($array as $city) {
+    echo "$city \n";
 }
 
 // Q8 連想配列-2
@@ -97,14 +96,11 @@ $array = [
     '茨城県' => '水戸市'
 ];
 
-$index = 0;
-foreach ($array as $x => $y){
+foreach ($array as $prefecture => $city){
 
-    if($index === 3){
-    echo "{$x}の県庁所在地は{$y}です。 \n";
-    break;
-    }
-    $index ++;
+  if($prefecture === '埼玉県' ){
+    echo "{$prefecture}の県庁所在地は{$city}です。 \n";
+  }
 }
 
 // Q9 連想配列-3
@@ -122,23 +118,18 @@ $array = [
 ];
 
 $array += [
-    '北海道' => '札幌市',
-    '福岡県' => '福岡市'
+  '北海道' => '札幌市',
+  '福岡県' => '福岡市'
     ];
 
-$index = 0;
+foreach ($array as $prefecture => $city){
 
-foreach ($array as $x => $y){
-
-    if ($index <= 6) {
-     echo "{$x}の県庁所在地は{$y}です。 \n";
-    }
-    else
-    {
-     echo "{$x}は関東地方ではありません。 \n";
+    if ($prefecture === '北海道' || $prefecture === '福岡県') {
+     echo "{$prefecture}は関東地方ではありません。 \n";
+    }else{
+     echo "{$prefecture}の県庁所在地は{$city}です。 \n";
     }
     
-$index ++;
 }
 
 // Q10 関数-1
