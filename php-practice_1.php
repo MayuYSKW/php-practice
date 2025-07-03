@@ -120,7 +120,7 @@ $array = [
 $array += [
   '北海道' => '札幌市',
   '福岡県' => '福岡市'
-    ];
+];
 
 foreach ($array as $prefecture => $city){
 
@@ -156,7 +156,7 @@ function calcTaxPrice($price)
 $price =1000;
 $taxInPrice = calcTaxPrice($price);
 
-echo $price . "円の商品の税込み価格は" . $taxInPrice . "円です。\n";
+echo "{$price}円の商品の税込み価格は{$taxInPrice}円です。\n";
 
 // Q12 関数とif文
 
@@ -165,8 +165,7 @@ echo $price . "円の商品の税込み価格は" . $taxInPrice . "円です。\
 function distinguishNum($number){
     if ($number % 2 === 1){
         return "{$number}は奇数です。\n";
-    }
-    else {
+    }else {
         return "{$number}は偶数です。\n";
     }
 }
@@ -185,7 +184,7 @@ function evaluateGrade($grade){
         case 'A':
         case 'B':
             return "合格です。\n";
-            
+
         case 'C':
             return "合格ですが追加課題があります。\n";
             

@@ -2,27 +2,27 @@
 // Q1 tic-tac問題
 
 <?php
+
 echo "1から100までのカウントを開始します\n\n";
 
 for ($i = 1; $i <= 100; $i++) {
+
     if ($i % 4 === 0 && $i % 5 === 0){ 
         echo "tic-tac\n";
-    }
-    elseif ($i % 4 === 0) {
+    }elseif ($i % 4 === 0) {
         echo "tic\n";
-    }
-    elseif ($i % 5 === 0) {
+    }elseif ($i % 5 === 0) {
         echo "tac\n";
-    }
-
-    else {
+    }else {
         echo $i . "\n";
     }
+
 }
 
 // Q2 多次元連想配列
 
   //問題1
+
 <?php
 
 $personalInfos = [
@@ -43,7 +43,7 @@ $personalInfos = [
     ],
 ];
 
-    echo $personalInfos[1]['name'] . "の電話番号は" . $personalInfos[1]['tel'] . "です。";
+    echo "{$personalInfos[1]['name']}の電話番号は{$personalInfos[1]['tel']}です。\n";
 
   //問題2
 
@@ -170,14 +170,6 @@ $today = new DateTime();
 
 $diff = $start->diff($today);
 
-echo $diff->days . "日が経過しました。";
-
-
-
-
-
-
-
-
+echo $diff->days . '日が経過しました。';
 
 ?>
