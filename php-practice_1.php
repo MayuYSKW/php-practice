@@ -12,20 +12,18 @@ echo '私の名前は「' . $name . '」です';
 
 <?php
 
-$num = 1;
-$x = $num * 5 * 4;
+$num = 5 * 4;
 
-echo $x . "\n";
-echo $x / 2 . "\n";
-
+echo $num . "\n";
+echo $num / 2 . "\n";
 
 // Q3 日付操作
 
 <?php
 
-date_default_timezone_set('Asia/Tokyo');
+date_default_timezone_set ('Asia/Tokyo');
 
-$date = date("Y年m月d日 H時i分s秒");
+$date = date ("Y年m月d日 H時i分s秒");
 
 echo '現在時刻は、' . $date . 'です';
 
@@ -38,8 +36,7 @@ $device = 'windows';
 
 if ($device === 'mac' || $device === 'windows') {
     echo '使用OSは、' . $device . 'です。';
-}
- else {
+} else {
     echo 'どちらでもありません。';
 }
 
@@ -48,7 +45,7 @@ if ($device === 'mac' || $device === 'windows') {
 <?php
 
 $age = 10;
-$message = ($age >= 18) ? '成人です。':'未成年です。';
+$message = ($age >= 18) ? '成人です。' : '未成年です。';
 
 echo $message;
 
@@ -59,8 +56,8 @@ echo $message;
 
 $array = ['埼玉県', '群馬県', '栃木県', '千葉県', '神奈川県', '東京都', '山梨県'];
 
-  $x = $array[2];
-  $y = $array[3];
+$x = $array[2];
+$y = $array[3];
 
 echo $x . 'と' . $y . "は関東地方の都道府県です\n";
 
@@ -96,11 +93,11 @@ $array = [
     '茨城県' => '水戸市'
 ];
 
-foreach ($array as $prefecture => $city){
+foreach ($array as $prefecture => $city) {
 
-  if($prefecture === '埼玉県' ){
-    echo "{$prefecture}の県庁所在地は{$city}です。 \n";
-  }
+    if ($prefecture === '埼玉県') {
+        echo "{$prefecture}の県庁所在地は{$city}です。\n";
+    }
 }
 
 // Q9 連想配列-3
@@ -108,7 +105,7 @@ foreach ($array as $prefecture => $city){
 <?php
 
 $array = [
-    '東京都' => '新宿区',
+    '東京都' => '新宿区',       //キーとバリュー
     '神奈川県' => '横浜市',
     '千葉県' => '千葉市',
     '埼玉県' => 'さいたま市',
@@ -118,16 +115,16 @@ $array = [
 ];
 
 $array += [
-  '北海道' => '札幌市',
-  '福岡県' => '福岡市'
+    '北海道' => '札幌市',
+    '福岡県' => '福岡市'
 ];
 
-foreach ($array as $prefecture => $city){
+foreach ($array as $prefecture => $city) {
 
     if ($prefecture === '北海道' || $prefecture === '福岡県') {
-     echo "{$prefecture}は関東地方ではありません。 \n";
+        echo "{$prefecture}は関東地方ではありません。 \n";
     }else{
-     echo "{$prefecture}の県庁所在地は{$city}です。 \n";
+        echo "{$prefecture}の県庁所在地は{$city}です。 \n";
     }
     
 }
@@ -136,25 +133,23 @@ foreach ($array as $prefecture => $city){
 
 <?php
 
-function sayHi($name)
-{
+function sayHi ($name) {
     echo $name . "さん、こんにちは。\n";
 }
 
-sayHi('黒崎');
-sayHi('朽木');
+sayHi ('黒崎');
+sayHi ('朽木');
 
 // Q11 関数-2
 
 <?php
 
-function calcTaxPrice($price)
-{
+function calcTaxPrice ($price) {
     return  $price * 1.10;
 }
 
-$price =1000;
-$taxInPrice = calcTaxPrice($price);
+$price = 1000;
+$taxInPrice = calcTaxPrice ($price);
 
 echo "{$price}円の商品の税込み価格は{$taxInPrice}円です。\n";
 
@@ -162,23 +157,23 @@ echo "{$price}円の商品の税込み価格は{$taxInPrice}円です。\n";
 
 <?php
 
-function distinguishNum($number){
-    if ($number % 2 === 1){
+function distinguishNum ($number) {
+    if ($number % 2 === 1) {
         return "{$number}は奇数です。\n";
-    }else {
+    } else {
         return "{$number}は偶数です。\n";
     }
 }
 
-echo distinguishNum(14142135);
-echo distinguishNum(17320508);
+echo distinguishNum (14142135);
+echo distinguishNum (17320508);
 
 
 // Q13 関数とswitch文
 
 <?php
 
-function evaluateGrade($grade){
+function evaluateGrade ($grade) {
 
     switch ($grade) {
         case 'A':
@@ -196,6 +191,7 @@ function evaluateGrade($grade){
     }
 }
 
-echo evaluateGrade('A');
-echo evaluateGrade('ぽ');
+echo evaluateGrade ('A');
+echo evaluateGrade ('ぽ');
+
 ?>
